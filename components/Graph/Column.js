@@ -8,7 +8,7 @@ export default function Column(props) {
   useEffect(() => {
     setAverage(calculateAverage());
     props.function(average);
-  }, [average, setAverage]);
+  }, [average, setAverage, calculateAverage, props.function]);
 
   function calculateAverage() {
     // Calcul de la moyenne pondérée (arrondie au pourcent près) d'une catégorie.
