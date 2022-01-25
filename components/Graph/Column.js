@@ -4,11 +4,14 @@ import { useEffect, useState } from "react";
 export default function Column(props) {
   const [data] = useState(props.data);
   const [average, setAverage] = useState(0);
+  let { func, total } = props;
 
   useEffect(() => {
     setAverage(calculateAverage());
-    props.function(average);
-  }, [average, setAverage]);
+    if (total === 0) {
+      func(average);
+    }
+  }, [average, setAverage, func, total]);
 
   function calculateAverage() {
     // Calcul de la moyenne pondérée (arrondie au pourcent près) d'une catégorie.

@@ -34,7 +34,8 @@ export default function Graph(props) {
             key={i}
             name={category[0]}
             data={category[1]}
-            function={pullData}
+            func={pullData}
+            total={total}
           />
         ))}
       </div>
