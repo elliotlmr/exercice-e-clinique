@@ -29,15 +29,16 @@ export default function Graph(props) {
       </div>
       {/* Affichage des colones du graphique, en fonction des données */}
       <div className={s.colContainer}>
-        {data.map((category, i) => (
-          <Column
-            key={i}
-            name={category[0]}
-            data={category[1]}
-            func={pullData}
-            total={total}
-          />
-        ))}
+        {data &&
+          data.map((category, i) => (
+            <Column
+              key={i}
+              name={category[0]}
+              data={category[1]}
+              func={pullData}
+              total={total}
+            />
+          ))}
       </div>
       {/* Affichage du score global, avec smiley, en fonction du résultat de la moyenne totale des données du graphique */}
       <h2 className={s.globalScore}>
