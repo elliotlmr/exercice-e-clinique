@@ -2,6 +2,13 @@ TEMPS DE REALISATION DE L'EXERCICE :
 
 Début : 25/01/2022 10h10.
 
-Pause :
+Pause : 11h30 - 11h40.
 
-Fin :
+Fin : 25/01/2022 12h45.
+
+TEMPS TOTAL ESTIMÉ : 2h25.
+
+Choix technique :
+
+-Next.js (technologie utilisée par l'entreprise, prise en charge du css simplifiée).
+-Sass.
