@@ -10,10 +10,11 @@ export default function Home(props) {
   );
 }
 
+// Server side imports, to get the datas :
 import data from "../data.json";
 
 export async function getStaticProps(context) {
   return {
-    props: { data: data }, // will be passed to the page component as props
+    props: { data: data },
   };
 }
