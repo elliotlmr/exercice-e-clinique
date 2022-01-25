@@ -7,10 +7,6 @@ export default function Graph(props) {
   const [data] = useState(Object.entries(props.data));
   const [total, setTotal] = useState(0);
 
-  useEffect(() => {
-    console.log(total);
-  }, [total, setTotal]);
-
   function pullData(colAverage) {
     setTotal((total += colAverage));
   }
