@@ -7,23 +7,24 @@ export default function Column(props) {
   let { func, total } = props;
 
   useEffect(() => {
+    function calculateAverage() {
+      // Calcul de la moyenne pondérée (arrondie au pourcent près) d'une catégorie.
+      let totalValue = 0;
+      let weight = 0;
+      // Pour chaque réponse, calculer : (( valeurChoix * ponderation ) / ponderation ).
+      for (let i = 0; i < data.length; i++) {
+        totalValue += data[i].valeurChoix * data[i].ponderation;
+        weight += data[i].ponderation;
+      }
+      return Math.floor((totalValue / weight) * 100);
+    }
+
     setAverage(calculateAverage());
+
     if (total === 0) {
       func(average);
     }
-  }, [average, setAverage, func, total]);
-
-  function calculateAverage() {
-    // Calcul de la moyenne pondérée (arrondie au pourcent près) d'une catégorie.
-    let total = 0;
-    let weight = 0;
-    // Pour chaque réponse, calculer : (( valeurChoix * ponderation ) / ponderation ).
-    for (let i = 0; i < data.length; i++) {
-      total += data[i].valeurChoix * data[i].ponderation;
-      weight += data[i].ponderation;
-    }
-    return Math.floor((total / weight) * 100);
-  }
+  }, [average, setAverage, func, total, data]);
 
   return (
     <div className={s.container}>
