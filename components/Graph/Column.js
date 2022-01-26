@@ -28,6 +28,7 @@ export default function Column(props) {
 
   return (
     <div className={s.container}>
+      {/* Affichage d'une colone du graphique en fonction de la moyenne pondérée calculée par calculateAverage() */}
       <div
         className={s.column}
         style={{
@@ -40,7 +41,7 @@ export default function Column(props) {
               : "var(--color-dark)",
         }}
       >
-        {/* Intégration de smiley ( toujouts positifs ) en fonction du résultat */}
+        {/* Intégration de smiley positifs en fonction du résultat en pourcentage au passage de la souris / mobile touch */}
         <div className={s.popup}>
           <p
             style={{

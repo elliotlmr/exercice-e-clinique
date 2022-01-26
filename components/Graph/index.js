@@ -12,7 +12,7 @@ export default function Graph(props) {
 
   return (
     <div className={s.container}>
-      {/* Background du graphique */}
+      {/* Affichage du graphique, en fonction des données */}
       <div className={s.graph}>
         <div className={s.topGraph}>
           <div className={s.percents}>
@@ -41,7 +41,6 @@ export default function Graph(props) {
             ))}
         </div>
       </div>
-      {/* Affichage des colones du graphique, en fonction des données */}
       {/* Affichage du score global, avec smiley, en fonction du résultat de la moyenne totale des données du graphique */}
       <h2 className={s.globalScore}>
         Global score : {total / data.length}%{" "}

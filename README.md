@@ -21,8 +21,8 @@ Début : 26/01/2022 10h00.
 
 Pause : 10h55 - 11h13
 
-Fin : 29/01/2022 11h20.
+Fin : 29/01/2022 11h30.
 
-Temps des modifications : 1h00.
+Temps des modifications : 1h10.
 
-Temps total passé sur la réalisation de l'exercice : environ 3h30.
+Temps total passé sur la réalisation de l'exercice : environ 3h40.
