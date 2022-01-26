@@ -19,4 +19,4 @@ Modifications graphiques de l'exercice après réalisation.
 
 Début : 26/01/2022 10h00.
 
-Pause : 10h55.
+Pause : 10h55 - 11h13

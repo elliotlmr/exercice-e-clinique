@@ -33,14 +33,18 @@ export default function Column(props) {
         style={{
           height: `${average}%`,
           backgroundColor:
-            average > 75 ? "var(--color-yellow)" : "var(--color-green)",
+            average >= 75
+              ? "var(--color-yellow)"
+              : average >= 50
+              ? "var(--color-green)"
+              : "var(--color-dark)",
         }}
       >
         {/* Intégration de smiley ( toujouts positifs ) en fonction du résultat */}
         <div className={s.popup}>
           <p
             style={{
-              color: average > 75 && "var(--color-green)",
+              color: average >= 75 && "var(--color-green)",
             }}
           >
             {average}%<br />
