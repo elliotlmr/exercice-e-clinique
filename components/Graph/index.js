@@ -14,32 +14,34 @@ export default function Graph(props) {
     <div className={s.container}>
       {/* Background du graphique */}
       <div className={s.graph}>
-        <div className={s.percent}>
-          <p>100%</p>
-          <div className={s.line}></div>
+        <div className={s.topGraph}>
+          <div className={s.percents}>
+            <p>100%</p>
+            <p>0%</p>
+          </div>
+          <div className={s.colContainer}>
+            {data &&
+              data.map((category, i) => (
+                <Column
+                  key={i}
+                  name={category[0]}
+                  data={category[1]}
+                  func={pullData}
+                  total={total}
+                />
+              ))}
+          </div>
         </div>
-        <div className={s.percent}>
-          <p>50%</p>
-          <div className={s.line}></div>
-        </div>
-        <div className={s.percent}>
-          <p>0%</p>
-          <div className={s.line}></div>
+        <div className={s.bottomGraph}>
+          {data &&
+            data.map((category, i) => (
+              <p key={i} className={s.catName}>
+                {category[0][0].toUpperCase() + category[0].substr(1)}
+              </p>
+            ))}
         </div>
       </div>
       {/* Affichage des colones du graphique, en fonction des données */}
-      <div className={s.colContainer}>
-        {data &&
-          data.map((category, i) => (
-            <Column
-              key={i}
-              name={category[0]}
-              data={category[1]}
-              func={pullData}
-              total={total}
-            />
-          ))}
-      </div>
       {/* Affichage du score global, avec smiley, en fonction du résultat de la moyenne totale des données du graphique */}
       <h2 className={s.globalScore}>
         Global score : {total / data.length}%{" "}

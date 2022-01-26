@@ -11,56 +11,81 @@
 
 .container {
   position: relative;
-  min-height: 50vh;
-  height: 60vh;
-  max-height: 1000px;
+  margin: 15px;
   width: 100%;
   max-width: 1000px;
+  padding-bottom: min(562.5px, 56.25%);
   background-color: var(--color-dark-op);
   border-radius: 5px;
-  display: flex;
+  box-shadow: 0 0 3px var(--color-dark);
 }
 
 .graph {
-  z-index: -1;
   position: absolute;
-  inset: 0;
+  inset: 0 0 0 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.topGraph {
+  height: 90%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.percents {
+  width: 5%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-
-.percent {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 100%;
-  & p {
-    width: fit-content;
-    margin-inline: 15px;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  & .line {
-    width: 90%;
-    height: 1px;
-    background-color: var(--color-dark);
+  font-family: "Quick-Bold";
+  text-align: center;
+  @media (max-width: 645px) {
+    font-size: 0.6rem;
   }
 }
 
 .colContainer {
+  width: 95%;
+  height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  height: 95%;
-  width: 90%;
-  margin: auto 2% auto 60px;
+  padding-top: 2px;
+  border-bottom: 1px solid var(--color-dark);
+  border-left: 1px solid var(--color-dark);
+}
+
+.bottomGraph {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding-left: 5%;
+}
+
+.catName {
+  font-family: "Quick-Bold";
+  font-size: 1rem;
+  margin: 0;
+  transform: rotate(-30deg);
+  @media (max-width: 645px) {
+    font-size: 0.6rem;
+  }
 }
 
 .globalScore {
   animation: fadeIn 0.3s ease-in-out;
   position: absolute;
-  bottom: -15%;
+  bottom: -100px;
   width: 100%;
   text-align: center;
   font-size: 2.5rem;
+  @media (max-width: 645px) {
+    font-size: 1.5rem;
+  }
 }

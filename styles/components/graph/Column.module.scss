@@ -23,7 +23,7 @@
 .container {
   position: relative;
   height: 100%;
-  width: 15%;
+  width: 8%;
   max-width: 100px;
   display: flex;
   justify-content: flex-end;
@@ -36,26 +36,13 @@
   width: 100%;
   margin-top: auto;
   background-color: var(--color-green);
-  border-radius: 5px;
+  border-radius: 5px 5px 0 0;
   &:hover {
     filter: drop-shadow(0 0 2px var(--color-dark));
     & .popup {
       opacity: 1;
     }
   }
-}
-
-.name {
-  animation: fadeIn 0.2s ease-in-out;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  color: var(--color-yellow);
-  text-shadow: 0 0 2px var(--color-dark);
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.2rem;
 }
 
 .popup {
@@ -70,4 +57,10 @@
   font-size: 2rem;
   color: var(--color-yellow);
   text-shadow: 0 0 2px var(--color-dark);
+  @media (max-width: 850px) {
+    font-size: 1.5rem;
+  }
+  @media (max-width: 645px) {
+    font-size: 1rem;
+  }
 }

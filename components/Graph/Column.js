@@ -32,11 +32,17 @@ export default function Column(props) {
         className={s.column}
         style={{
           height: `${average}%`,
+          backgroundColor:
+            average > 75 ? "var(--color-yellow)" : "var(--color-green)",
         }}
       >
         {/* Intégration de smiley ( toujouts positifs ) en fonction du résultat */}
         <div className={s.popup}>
-          <p>
+          <p
+            style={{
+              color: average > 75 && "var(--color-green)",
+            }}
+          >
             {average}%<br />
             {average > 90
               ? "🤩"
@@ -50,9 +56,6 @@ export default function Column(props) {
           </p>
         </div>
       </div>
-      <p className={s.name}>
-        {props.name[0].toUpperCase() + props.name.substr(1)}
-      </p>
     </div>
   );
 }
