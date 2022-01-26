@@ -12,3 +12,9 @@ Choix technique :
 
 -Next.js (technologie utilisée par l'entreprise, prise en charge du css simplifiée).
 -Sass.
+
+---
+
+Modifications graphiques de l'exercice après réalisation.
+
+Début : 26/01/2022 10h00.
