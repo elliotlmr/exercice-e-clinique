@@ -20,3 +20,9 @@ Modifications graphiques de l'exercice après réalisation.
 Début : 26/01/2022 10h00.
 
 Pause : 10h55 - 11h13
+
+Fin : 29/01/2022 11h20.
+
+Temps des modifications : 1h00.
+
+Temps total passé sur la réalisation de l'exercice : environ 3h30.
